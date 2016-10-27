@@ -1,0 +1,44 @@
+{
+  "name": "establishment",
+  "plural": "establishments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "direction": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "dateCreation": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "hidden": ["id"],
+  "validations": [],
+  "relations": {
+    "tables": {
+      "type": "hasMany",
+      "model": "table",
+      "foreignKey": ""
+    },
+    "tasks": {
+      "type": "hasMany",
+      "model": "task",
+      "foreignKey": ""
+    }
+    
+  },
+  "acls": [],
+  "methods": {}
+}

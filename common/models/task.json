@@ -1,0 +1,46 @@
+{
+  "name": "task",
+  "plural": "tasks",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "type": {
+      "type": "String",
+      "enum": [
+        "getBill",
+        "callWaiter"
+      ]
+    },
+    "status": {
+      "type": "String",
+      "enum": [
+        "open",
+        "close"
+      ],
+      "default": "open"
+    },
+    "dateCreation": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "hidden": ["id"],
+  "validations": [],
+  "relations": {
+    "table": {
+      "type": "belongsTo",
+      "model": "table",
+      "foreignKey": ""
+    },
+    "establishment": {
+      "type": "belongsTo",
+      "model": "establishment",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongodbDS": {
+    "host": "ds049456.mlab.com",
+    "port": 49456,
+    "url": "mongodb://admin:admin@ds049456.mlab.com:49456/hype_project",
+    "database": "hype_project",
+    "password": "admin",
+    "name": "mongodbDS",
+    "user": "admin",
+    "connector": "mongodb"
+  }
+}
